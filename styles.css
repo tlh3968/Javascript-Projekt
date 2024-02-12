@@ -1,4 +1,9 @@
 /*Generelle styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 /*Slidesshow*/
@@ -6,6 +11,76 @@
 
 /*Item list*/
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider .slide-button {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider .slide-button:hover {
+    background: #444;
+}
+
+.slider .slidebutton#prev-slide {
+    left: 20px;
+}
+
+.slider .slidebutton#next-slide {
+    right: 20px;
+}
+
+.slider .image-list {
+    display: grid;
+    gap: 18px;
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.slider .image-list::-webkit-scrollbar {
+    display: none;
+
+}
+
+.slider .image-list .image-item {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
 /*Searchfield*/
 
