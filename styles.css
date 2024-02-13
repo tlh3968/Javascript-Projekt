@@ -1,14 +1,13 @@
 /*Generelle styles*/
-<<<<<<< Updated upstream
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-=======
+}
+
 @font-face {
     font-family: 'faraos';
     src: url('faraos.ttf') format('truetype');
->>>>>>> Stashed changes
 }
 
 body {
