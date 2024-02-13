@@ -17,14 +17,6 @@ body {
 
 
 /*Item list*/
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
 .container {
     max-width: 1200px;
     width: 95%;
