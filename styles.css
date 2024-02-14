@@ -13,7 +13,7 @@
 body {
     margin: 0;
 }
-/*Slidesshow*/
+/*SLIDESHOW*/
 .mySlides {
     display: none;
     align-items: center;
@@ -23,7 +23,7 @@ body {
 
 #slideshow-container {
     position: relative;
-    max-width: 70%;
+    max-width: 69%;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -85,6 +85,16 @@ user-select: none;
   .active, .dot:hover {
     background-color: #1a1a1aa8;
   }
+
+
+  /*CATEGORY BOXES*/
+  #categories {
+    flex-direction: row;
+  }
+  .title-hover:hover {
+    color: rgb(233, 201, 98) !important; 
+    cursor: pointer;
+}
 
 /*Item list*/
 .container {
