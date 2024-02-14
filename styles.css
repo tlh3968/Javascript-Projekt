@@ -13,6 +13,11 @@
 body {
     margin: 0;
 }
+
+main {
+    padding-top: 138px;
+}
+
 /*SLIDESHOW*/
 .mySlides {
     display: none;
@@ -179,16 +184,23 @@ user-select: none;
 header {
     width: 100%;
     height: 138px;
+    padding: 10px 10vw 0 10vw;
     border-bottom: 4px solid #ebebe3;
-}
-
-nav {
-    padding: 10px 10% 0 10%;
+    z-index: 1;
+    position: fixed;
+    background-color: white;
 }
 
 .logo-large {
     margin-left: -25px;
     margin-top: -10px;
+    cursor: pointer;
+}
+
+.logo-small {
+    margin-bottom: auto;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 header li {
@@ -207,6 +219,13 @@ header li {
 
 .sitemap li {
     padding: 2px 13px 4px;
+    height: fit-content;
+}
+
+.sitemap li:hover {
+    cursor: pointer;
+    color: black;
+    text-decoration: underline;
 }
 
 .mainmenu {
@@ -216,14 +235,16 @@ header li {
 .mainmenu li {
     font: 22px/34px faraos;
     letter-spacing: 2px;
-    display: flex;
     padding: 0 12px;
+    display: flex;
+    align-items: center;
 }
 
 .mainmenu li:hover {
     cursor: pointer;
     color: #efd17a;
-    border-bottom: solid 4px red;
+    border-bottom: solid 4px #efd17a;
+    margin-bottom: -7px;
 }
 
 #menu1 {
@@ -234,5 +255,9 @@ header li {
 
 #menu2 {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+}
+
+.search-and-cart {
+    margin-left: auto;
 }
