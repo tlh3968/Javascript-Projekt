@@ -96,6 +96,17 @@ user-select: none;
     cursor: pointer;
 }
 
+/*POSTERS*/
+#posters {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.poster {
+    padding: 10px;
+}
+
 /*Item list*/
 .container {
     max-width: 1200px;
