@@ -115,7 +115,6 @@ user-select: none;
 /*Item list*/
 .grid-row {
     display: block;
-    position: relative;
     clear: both;
     width: 1280px;
     margin: 0 auto;
@@ -141,7 +140,6 @@ user-select: none;
 }
 
 .slider {
-    position: relative;
     width: 100%;
     height: auto;
     margin: 20px 0 12px;
@@ -173,7 +171,6 @@ img {
 
 .itemslider-items {
     display: hidden;
-    position: relative;
     float: left;
     width: 230px;
     height: auto;
@@ -181,7 +178,6 @@ img {
 }
 
 .itemslider-status {
-    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -193,7 +189,6 @@ img {
 }
 
 .itemslider-items img {
-    position: relative;
     max-width: 228px;
     max-height: 343px;
 }
