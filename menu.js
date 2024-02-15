@@ -49,3 +49,5 @@ window.addEventListener('scroll', function() { // function der venter på scroll
         });
     }
 });
+
+// halløjsa
