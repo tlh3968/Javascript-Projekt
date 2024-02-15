@@ -41,16 +41,16 @@
                 <div id="searchBtn">
                     <img class="knap01" src="Images/søgeknap.png" alt="Søge knappen">
                 </div>
-                
-                
             </div>
         </nav>
         <div id="searchPopup" class="popup">
-            <img class="logo" src="logo-small.png" alt="logo">
-            <input type="text" id="searchInput" placeholder="Søg efter varer...">
-            <span id="closeBtn" class="closeBtn" onclick="closePopup()">&times;
-                <!--<img class="Knap02" src="xknap.png" alt="Luk">-->
-            </span>
+            <div class="searcharea">
+                <img class="logo" src="./Images/Logos/logo-small_nobg.png" alt="logo">
+                <input type="text" id="searchInput" placeholder="Søg efter varer...">
+                <span id="closeBtn" class="closeBtn" onclick="closePopup()">&times;
+                    <!--<img class="Knap02" src="xknap.png" alt="Luk">-->
+                </span>
+            </div>
             <div id="results">
                 <div class="marvel01">marvel01</div>
                 <div class="marvel02">marvel02</div>
@@ -58,6 +58,7 @@
                 <div class="marvel04">marvel04</div>
                 <div class="marvel05">marvel05</div>
             </div>
+            <div id="searchOverlay"></div>
         </div>
     </header>
     <main>
@@ -104,7 +105,6 @@
                         <span>Tilbud</span>
                         <a href="not working lol">Se Alle</a>
                     </h3>
-        
                     <div class="itemslider-items">
                         <div id="onsale" class="itemslider-inner">
                             <div class="itemslider-status">

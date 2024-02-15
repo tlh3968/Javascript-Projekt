@@ -274,9 +274,6 @@ span.itemslider-item-price-currency {
     padding-top: 9px;
 }
 
-/*Searchfield*/
-
-
 /*Menu*/
 header {
     width: 100%;
@@ -390,13 +387,17 @@ header li {
 
 .popup {
     display: none;
-    align-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: -87px;
-    background-color: #Ebebe1;
-
+    flex-direction: column;
+    position: fixed;
     width: 100%;
+    top: 0;
+}
+
+.searcharea {
+    display: flex;
+    align-items: center;
+    background-color: #Ebebe1;
+    z-index: 1;
 }
 
 #searchInput {
@@ -407,22 +408,26 @@ header li {
     margin-right: auto;
 }
 
-.closeBtn{ 
+.closeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 40px;
+    font-weight: bold;
     background-color: yellow;
-    border-radius: 1000px;
-    padding: 0px 12px;
-    border-style: solid;
-    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 #results {
     display: flex;
     flex-direction: row;
-    
-    margin-top: 5px;
+    margin-top: 0px; /* Kan ændres */
     background-color: lime;
+    z-index: 1;
 }
 
 #searchBtn {
@@ -434,4 +439,12 @@ header li {
     padding-left: 10px;
     padding-top: 7px;
     padding-bottom: 7px;
+}
+
+#searchOverlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 0;
 }
