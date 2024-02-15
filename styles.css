@@ -389,49 +389,84 @@ header li {
 }
 
 .popup {
-    display: none;
-    align-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: -87px;
-    background-color: #Ebebe1;
-
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* gennemsigtig baggrund for popup'en */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* sikrer, at popup'en er forrest */
+}
+
+.popup.active {
+    display: flex;
+}
+
+#searchInputContainer {
+    width:100%; /* Juster bredden efter behov */
+    background-color:  #Ebebe1; /* baggrundsfarven for søgefeltets container */
+    padding: 20px 0; /* tilpas padding efter behov */
+    display: flex;
+    justify-content: center; /* Centrer søgefeltet */
+    align-items: center;
 }
 
 #searchInput {
-    width: 400px;
-    background-color: aqua;
-    padding: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 25%; /* Søgefeltet fylder hele bredden af containeren */
+    padding: 10px;
 }
 
-.closeBtn{ 
+#results {
+    width: 100%;
+    height: calc(100% - 40px); /* træk højden af søgefeltets container fra for at undgå overlapning */
+    overflow-y: auto; /* Tilføj en rullebjælke, hvis indholdet er for stort */
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
     font-size: 40px;
     background-color: yellow;
-    border-radius: 1000px;
-    padding: 0px 12px;
+    padding: 0px 15px;
     border-style: solid;
+    border-radius: 50%;
     cursor: pointer;
     margin-right: 20px;
+    font-family:'Rajdhani';
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: auto; /* Juster størrelsen efter behov */
+    height: auto; /* Sørg for at bevare proportionerne */
 }
 
 #results {
     display: flex;
-    flex-direction: row;
-    
-    margin-top: 5px;
-    background-color: lime;
+    flex-wrap: wrap; /* Produkter vil flyde ned på næste linje, hvis der ikke er plads */
+    width: 100%;
+    margin-top: 0; /* Fjern top-margin */
+    margin-bottom: 0;
+}
+.product {
+    margin: 10px;
+    text-align: center;
 }
 
-#searchBtn {
-    cursor: pointer;
+.product img {
+    width: 50%; /* Sørg for, at billedet fylder hele bredden af produkt-div'en */
 }
 
-.logo {
-    background-color: blueviolet;
-    padding-left: 10px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+.product .productName {
+    font-size: 16px; /* Juster skriftstørrelsen efter dine præferencer */
+    margin-top: 5px; /* Tilføj lidt plads mellem billedet og teksten */
+    color: white; /* Ændre farven på teksten efter behov */
 }
