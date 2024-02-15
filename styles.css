@@ -358,10 +358,6 @@ header li {
     align-items: center;
 }
 
-.search-and-cart {
-    margin-left: auto;
-}
-
 
 /*FOOOTER STUFF*/
 #velkommen {
@@ -385,4 +381,57 @@ header li {
     padding-top: 100px;
     margin-bottom: -14rem;
     margin-left: 25%;
+}
+
+/*Style for søgefelt*/
+.knap01 {
+    display: flex;
+}
+
+.popup {
+    display: none;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -87px;
+    background-color: #Ebebe1;
+
+    width: 100%;
+}
+
+#searchInput {
+    width: 400px;
+    background-color: aqua;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.closeBtn{ 
+    font-size: 40px;
+    background-color: yellow;
+    border-radius: 1000px;
+    padding: 0px 12px;
+    border-style: solid;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#results {
+    display: flex;
+    flex-direction: row;
+    
+    margin-top: 5px;
+    background-color: lime;
+}
+
+#searchBtn {
+    cursor: pointer;
+}
+
+.logo {
+    background-color: blueviolet;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
