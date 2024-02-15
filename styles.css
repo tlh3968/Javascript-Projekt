@@ -389,13 +389,13 @@ header li {
 }
 
 .popup {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* gennemsigtig baggrund for popup'en */
-    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -463,6 +463,7 @@ header li {
 
 .product img {
     width: 50%; /* Sørg for, at billedet fylder hele bredden af produkt-div'en */
+    margin: auto;
 }
 
 .product .productName {

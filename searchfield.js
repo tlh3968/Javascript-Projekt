@@ -1,10 +1,10 @@
 // Variabler
 let products = [
-    { name: 'star wars', image: 'starwars1.jpg' },
-    { name: 'star wars', image: 'starwars2.jpg' },
-    { name: 'star wars', image: 'starwars3.jpg' },
-    { name: 'star wars', image: 'starwars4.jpg' },
-    { name: 'star wars', image: 'starwars5.jpg' },
+    { name: 'Star Wars', image: 'Images/produktbilleder/starwars1.jpg' },
+    { name: 'Star Wars', image: 'Images/produktbilleder/starwars2.jpg' },
+    { name: 'Star Wars', image: 'Images/produktbilleder/starwars3.jpg' },
+    { name: 'Star Wars', image: 'Images/produktbilleder/starwars4.jpg' },
+    { name: 'Star Wars', image: 'Images/produktbilleder/starwars5.jpg' },
 ];
 
 let searchInput = document.getElementById('searchInput');
@@ -29,25 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Funktion til at vise søgeresultater
-function displayResults(results) {
-    resultsContainer.innerHTML = '';
-
-    if (results.length === 0) {
-        resultsContainer.innerHTML = '<li>Ingen resultater fundet.</li>';
-    } else {
-        results.forEach(result => {
-            let li = document.createElement('li');
-            let img = document.createElement('img');
-            img.src = result.image;
-            img.alt = result.name;
-            li.textContent = result.name;
-            li.appendChild(img);
-            resultsContainer.appendChild(li);
-        });
-    }
-}
-
 // Simuleret søgefunktion
 function search(query) {
     return products.filter(product => product.name.toLowerCase().includes(query.toLowerCase()));
@@ -57,5 +38,27 @@ function search(query) {
 document.getElementById('searchBtn').addEventListener('click', function() {
     let query = searchInput.value.trim(); // Fjerner eventuelle mellemrum i starten og slutningen af søgestrengen
     let results = search(query); // Udfører søgningen
-    displayResults(results); // Viser resultaterne
+
+    // Viser resultaterne, hvis der er nogle, ellers vises en besked om ingen resultater
+    if (results.length > 0) {
+        displayResults(results);
+    } else {
+        resultsContainer.innerHTML = '<li>Ingen resultater fundet.</li>';
+    }
 });
+
+// Funktion til at vise søgeresultater
+function displayResults(results) {
+    resultsContainer.innerHTML = '';
+
+    results.forEach(result => {
+        let li = document.createElement('li');
+        let img = document.createElement('img');
+        img.src = result.image;
+        img.alt = result.name;
+        li.textContent = result.name;
+        li.appendChild(img);
+        resultsContainer.appendChild(li);
+    });
+}
+
