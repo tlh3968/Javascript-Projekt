@@ -1,12 +1,12 @@
 window.addEventListener('scroll', function() { // function der venter på scroll
-    var header = document.querySelector('header');
-    var menu1 = document.getElementById('menu1');
-    var mainMenu = document.querySelector('.mainmenu');
-    var existingLogo = document.querySelector('.logo-small');
-    var mainmenuItems = document.querySelectorAll('.mainmenu li');
+    const header = document.querySelector('header');
+    const menu1 = document.getElementById('menu1');
+    const mainMenu = document.querySelector('.mainmenu');
+    const existingLogo = document.querySelector('.logo-small');
+    const mainmenuItems = document.querySelectorAll('.mainmenu li'); 
 
     // Finder den nuværende scroll position
-    var scrollPosition = window.scrollY;
+    const scrollPosition = window.scrollY;
 
     // Bruger nedenstående script hvis scroll længden er mere end 20
     if (scrollPosition > 20) {
@@ -15,16 +15,23 @@ window.addEventListener('scroll', function() { // function der venter på scroll
 
         // Hvis logoet ikke findes bliver det lavet og tildelt nedenstående styles
         if (!existingLogo) { // "!" betyder at den kun bruger koden hvis existingLogo ikke findes
-            var logoSmall = document.createElement('img');
+            const logoSmall = document.createElement('img');
             logoSmall.src = './Images/Logos/logo-small.png';
             logoSmall.alt = 'Small Logo';
             logoSmall.classList.add('logo-small'); // Tildeler en klasse til CSS styling
             mainMenu.parentElement.insertBefore(logoSmall, mainMenu); // Indsætter logoet før parent elementet mainmenu
         }
 
-        // Sætter højden for hvert li item i mainmenu
+        // Sætter variabel og array på højden af menuen
+        const heightArray = [
+            { property: 'height', value: '70px' },
+        ];
+
+        // Loop der kører nedenstående styles for hvert li element
         mainmenuItems.forEach(function(item) {
-            item.style.height = '70px';
+            heightArray.forEach(function(style) {
+                item.style[style.property] = style.value;
+            });
         });
 
     } else { // Bruger nedenstående script hvis scroll længden er mindre end 20
