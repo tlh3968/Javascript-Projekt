@@ -8,7 +8,7 @@
     <script src="slideshow.js" defer></script>
     <script src="item-list.js" defer></script>
     <script src="menu.js" defer></script>
-    <script src="searchfield.js" defer></script>    
+     <script src="searchfield.js" defer></script>   
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700" rel="stylesheet">
 </head>
 <body>
@@ -43,23 +43,18 @@
                 </div>
             </div>
         </nav>
+
         <div id="searchPopup" class="popup">
-            <div class="searcharea">
-                <img class="logo" src="./Images/Logos/logo-small_nobg.png" alt="logo">
+            <div id="searchInputContainer">
+                <img src="Images/Logos/logo-small.png" alt="Logo" class="logo">
                 <input type="text" id="searchInput" placeholder="Søg efter varer...">
-                <span id="closeBtn" class="closeBtn" onclick="closePopup()">&times;
-                    <!--<img class="Knap02" src="xknap.png" alt="Luk">-->
-                </span>
+                <span id="closeBtn" class="closeBtn">&times;</span>
             </div>
-            <div id="results">
-                <div class="marvel01">marvel01</div>
-                <div class="marvel02">marvel02</div>
-                <div class="marvel03">marvel03</div>
-                <div class="marvel04">marvel04</div>
-                <div class="marvel05">marvel05</div>
-            </div>
-            <div id="searchOverlay"></div>
+            <ul id="results"></ul>
         </div>
+        
+        
+       
     </header>
     <main>
         <section id="slideshow">
