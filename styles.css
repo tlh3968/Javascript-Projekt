@@ -140,6 +140,23 @@ text-decoration: none;
     box-sizing: border-box;
 }
 
+.itemslider-inner .slide-button {
+    position: absolute;
+    margin-top: 150px;
+    height: 45px;
+    width: 45px;
+    color: rgb(65, 65, 65);
+    border: none;
+    outline: none;
+    background: rgb(241, 241, 241);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.itemslider-inner .slide-button:hover {
+    background: #c0c0c0;
+}
+
 .slider {
     width: 100%;
     height: auto;
@@ -154,6 +171,7 @@ text-decoration: none;
 }
 
 h3 {
+    font: 600 30px/34px Rajdhani,Arial,sans-serif;
     font-size: 24px;
 }
 
@@ -274,6 +292,10 @@ span.itemslider-item-price-currency {
     padding-top: 9px;
 }
 
+.item-price-offer:hover {
+    font-size: 1.7em;
+}
+
 /*Searchfield*/
 
 
@@ -362,7 +384,6 @@ header li {
     margin-left: auto;
 }
 
-
 /*FOOOTER STUFF*/
 #velkommen {
     font-family: sans-serif;
@@ -381,7 +402,7 @@ header li {
     padding-bottom: 1rem;
 }
 #footerimg {
-    margin-top: 100px;
+    margin-top: 475px;
     padding-top: 100px;
     margin-bottom: -14rem;
     margin-left: 25%;
