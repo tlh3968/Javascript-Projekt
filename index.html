@@ -8,7 +8,7 @@
     <script src="slideshow.js" defer></script>
     <script src="item-list.js" defer></script>
     <script src="menu.js" defer></script>
-    <script src="searchfield.js" defer></script>    
+     <script src="searchfield.js" defer></script>   
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700" rel="stylesheet">
 </head>
 <body>
@@ -37,15 +37,24 @@
                     <li>Nyheder</li>
                     <li>Tilbud</li>
                 </ul>
-                <div class="search-and-cart">
-                    <div class="search">
-                        <input id="searchfield" type="text" placeholder="Søg her...">
-                        <div class="search-button"></div>
-                    </div>
-                    <img src="" alt="Cart icon" class="cart-icon">
+                <!--søgefelt html-->
+                <div id="searchBtn">
+                    <img class="knap01" src="Images/søgeknap.png" alt="Søge knappen">
                 </div>
             </div>
         </nav>
+
+        <div id="searchPopup" class="popup">
+            <div id="searchInputContainer">
+                <img src="Images/Logos/logo-small.png" alt="Logo" class="logo">
+                <input type="text" id="searchInput" placeholder="Søg efter varer...">
+                <span id="closeBtn" class="closeBtn">&times;</span>
+            </div>
+            <ul id="results"></ul>
+        </div>
+        
+        
+       
     </header>
     <main>
         <section id="slideshow">
@@ -91,7 +100,6 @@
                         <span>Tilbud</span>
                         <a href="not working lol">Se Alle</a>
                     </h3>
-        
                     <div class="itemslider-items">
                         <div id="onsale1" class="itemslider-inner">                          
                             <div class="itemslider-status">
