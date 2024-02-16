@@ -375,21 +375,43 @@ header li {
 
 
 /*FOOOTER STUFF*/
+footer {
+    margin-top: 350px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: bold;
+   
+}
 #velkommen {
-    font-family: sans-serif;
     background-color: #efd17a;
     justify-content: center;
     color: #0e0f11;
     text-align: left;
     padding: 30px;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 29%;
+    padding-right: 29%;
     padding-top: 10%;
 }
 .footerh1 {
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
     padding-bottom: 1rem;
+    font-size: 2rem;
+    color: #0e0f11;
+    letter-spacing: 0.2em;
+}
+.footerh2 {
+    text-align: left;
+    font-weight: bold;
+    color: #17181b;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.7em;
+}
+.footerP {
+    font-weight:500;
+    color: #1b1717;
+    line-height: 1.4;
 }
 #footerimg {
     margin-top: 475px;
@@ -397,6 +419,25 @@ header li {
     margin-bottom: -14rem;
     margin-left: 25%;
 }
+
+.underfooter {
+    display: flex;
+    flex-direction: row;  
+    font-size: 0.8em; 
+    justify-content: center;
+}
+.footerlist {
+    padding: 30px;
+    margin-top: 3rem;
+    padding-right: 30px;  
+    color: #b9b9b9;
+    font-size: larger;
+  
+}
+.footerlist p {
+    line-height: 1.7em;
+}
+
 
 /*Style for søgefelt*/
 .knap01 {
