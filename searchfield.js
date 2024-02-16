@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchBtn.addEventListener('click', function() {
         searchPopup.classList.add('active');
     });
-
+    
     // Luk popup når lukknappen klikkes
     closeBtn.addEventListener('click', function() {
         searchPopup.classList.remove('active');
@@ -35,7 +35,7 @@ function search(query) {
 }
 
 // Eventlistener til søgeknappen
-document.getElementById('searchBtn').addEventListener('click', function() {
+document.getElementById('searchInput').addEventListener('change', function() {
     let query = searchInput.value.trim(); // Fjerner eventuelle mellemrum i starten og slutningen af søgestrengen
     let results = search(query); // Udfører søgningen
 
