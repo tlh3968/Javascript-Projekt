@@ -437,7 +437,13 @@ footer {
 .footerlist p {
     line-height: 1.7em;
 }
-
+.footerh2:hover {
+    color: rgb(233, 201, 98) !important; 
+    cursor: pointer;
+}
+.footerlist p:hover {
+    color: #2b2d31;
+}
 
 /*Style for søgefelt*/
 .knap01 {

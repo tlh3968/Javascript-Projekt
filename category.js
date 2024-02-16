@@ -52,10 +52,7 @@ const categoryImages = [
 let section = document.getElementById('categories');
 
 categoryImages.forEach(catImage => {
-    section.innerHTML += `<div class="category-item">
-                            <img src="${catImage.image}">
-                            <h2>${catImage.title}</h2>
-                          </div>`;
+    section.innerHTML += `<div class="category-item"><img src="${catImage.image}"><h2>${catImage.title}</h2></div>`;
 });
 
 // Apply styles to title elements
